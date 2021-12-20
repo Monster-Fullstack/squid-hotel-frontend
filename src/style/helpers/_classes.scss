@@ -1,0 +1,15 @@
+@use "../../style/helpers/var" as *;
+.backgroundImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.app_name {
+  color: $white_color;
+  font-size: $h1_size;
+  font-family: $h1_font;
+  span {
+    color: rgba(hotpink, 0.8);
+  }
+}

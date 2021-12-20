@@ -1,0 +1,17 @@
+@use "../helpers/var" as *;
+// -------------- ~~ please if you don't use mixin delete it ~~ -----------------------
+// for grid your app
+@mixin grid_flex($fd: row, $jc: left) {
+  display: flex;
+  flex-direction: $fd;
+  flex-wrap: wrap;
+  justify-content: $jc;
+}
+
+// for center the element [ abselute || fixed ] only
+@mixin center_position($position) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

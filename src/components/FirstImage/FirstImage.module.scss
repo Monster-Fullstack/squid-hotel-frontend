@@ -1,0 +1,47 @@
+@use "../../style/helpers/var" as *;
+@use "../../style/helpers/mixins" as m;
+@use "../../style/helpers/classes" as *;
+.firstImage {
+  text-align: center;
+  h1 {
+    @include m.center_position(absolute);
+    @extend .app_name;
+    top: 7rem;
+  }
+
+  .sentence {
+    @include m.center_position(absolute);
+    top: 14rem;
+    color: $white_color;
+    font-size: $big_font;
+    font-family: $horror_font;
+    animation: popup 2.5s 1;
+  }
+
+  .room_type {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: $big_font + 1;
+    color: $white_color;
+    font-family: $h1_font;
+  }
+}
+
+@keyframes popup {
+  from {
+    font-size: $big_font - 0.5;
+  }
+  to {
+    font-size: $big_font;
+  }
+}
+
+@media (max-width: $phone_size) {
+  h1 {
+    font-size: $big_font !important;
+  }
+  p {
+    font-size: $main_font - 1.2 !important;
+  }
+}

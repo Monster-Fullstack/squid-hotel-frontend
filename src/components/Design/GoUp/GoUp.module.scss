@@ -1,0 +1,37 @@
+@use "../../../style/helpers/var" as *;
+.goup {
+  opacity: 0;
+  border-radius: $circle;
+  color: $white_color;
+  background: $secondary_color;
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 5000;
+  position: fixed;
+  border: none;
+  bottom: 0.5rem;
+  right: 1.2rem;
+  padding: 0.75rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  color: $main_color;
+}
+
+.goup:hover {
+  background: rgba($secondary_color, 0.7);
+}
+
+.visable {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(5rem);
+}

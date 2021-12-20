@@ -1,0 +1,50 @@
+@use "../../../style/helpers/classes" as *;
+@use "../../../style/helpers/var" as *;
+.card {
+  width: 22rem;
+  height: 14rem;
+  padding: 1rem 2rem;
+  border-radius: $radius;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  @extend .backgroundImg;
+
+  .title {
+    text-align: center;
+    width: 8rem;
+    margin: 0 auto;
+    color: rgba(#fff, 0.8);
+    background-color: $main_color;
+    border-radius: $radius;
+  }
+
+  .content {
+    opacity: 0;
+    margin-top: 2rem;
+    width: 60%;
+    transform: translateX(-2rem);
+  }
+}
+
+.card:hover {
+  cursor: pointer;
+  .content {
+    opacity: 1;
+    color: $white_color;
+    background: rgba(#000, 0.6);
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: $phone_size) {
+  .card {
+    width: 16rem;
+  }
+}
+
+@media (max-width: $small_sizes) {
+  .card {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}

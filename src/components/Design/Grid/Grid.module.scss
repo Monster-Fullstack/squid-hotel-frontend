@@ -1,0 +1,5 @@
+@use "../../../style/helpers/var" as *;
+@use "../../../style/helpers/mixins" as m;
+.grid {
+  @include m.grid_flex();
+}

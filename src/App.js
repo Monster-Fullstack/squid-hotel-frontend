@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Layout/Footer";
+import Header from "./components/Layout/Header";
+import Home from "./pages/Home";
+import Room from "./pages/Room";
+import Rooms from "./pages/Rooms";
+import Store from "./pages/Store";
+import "./style/app.scss";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rooms" element={<Rooms />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/rooms/:id" element={<Room />} />
+      </Routes>
+      <Footer />
+    </Fragment>
   );
-}
+};
 
 export default App;

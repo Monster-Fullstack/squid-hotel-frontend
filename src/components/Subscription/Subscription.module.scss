@@ -1,0 +1,23 @@
+@use "../../style/helpers/var" as *;
+.parent {
+  height: 42rem;
+  padding: 2rem;
+  .content_parent {
+    padding: 2rem;
+    width: 45%;
+    h3 {
+      font-size: $big_font;
+      color: rgba($white_color, 0.8);
+    }
+    p {
+      color: rgba($white_color, 0.8);
+      margin-top: 2.5rem;
+      font-size: $font_size + 0.25;
+      overflow-wrap: break-word;
+    }
+  }
+  .subscription_parent {
+    margin-top: 5rem;
+    width: 55%;
+  }
+}

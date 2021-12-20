@@ -1,0 +1,7 @@
+-------- ~ Store Data ~ --------
+1- Rooms Data 
+ - title
+ - difficaulty [ easy, meduim, hard, extremly hard, nighmare ]
+ - room avatar image
+ - room [images]
+ - room subscription type $$

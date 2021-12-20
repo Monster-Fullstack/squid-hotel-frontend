@@ -1,0 +1,17 @@
+@use "../../style/helpers/var" as *;
+@use "../../style/helpers/classes" as *;
+.leftSide {
+  width: 60%;
+  height: 30rem;
+}
+
+.rightSide {
+  width: 40%;
+  height: 30rem;
+  text-align: center;
+  background: rgba(#eee, 0.4);
+  h3 {
+    @extend .app_name;
+    color: $smooth_black;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../../style/helpers/var" as *;
+.btn {
+  background: $secondary_color;
+  color: $smooth_black;
+  padding: 0.8rem 1.8rem;
+  border-radius: $radius;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgba($secondary_color, 0.7);
+  border-radius: $radius + 0.3;
+}
