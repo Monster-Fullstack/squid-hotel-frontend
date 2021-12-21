@@ -1,0 +1,26 @@
+@use "../../../style/helpers/var" as *;
+
+.grandfather {
+  border-bottom: 1px solid rgba($main_color, 0.2);
+  margin-bottom: 2rem;
+  .parents {
+    text-align: center;
+    margin-bottom: 2rem;
+    .icon {
+      font-size: $big_font + 0.5;
+      color: $secondary_color;
+    }
+
+    .hard {
+      color: rgba(red, 0.6);
+      font-size: $big_font + 0.8;
+    }
+
+    p {
+      font-family: $h1_font;
+      font-size: $font_size - 0.1;
+      color: $main_color;
+      margin-top: 0.5rem;
+    }
+  }
+}

@@ -3,3 +3,21 @@
 .grid {
   @include m.grid_flex();
 }
+
+.column {
+  @include m.grid_flex(column);
+}
+
+.row {
+  @include m.grid_flex();
+}
+
+@media (max-width: $tablet_size) {
+  .grid,
+  .row {
+    flex-direction: column !important;
+    div {
+      width: 100%;
+    }
+  }
+}

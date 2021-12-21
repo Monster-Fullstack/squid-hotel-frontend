@@ -1,0 +1,37 @@
+@use "../../../style/helpers/var" as *;
+.grandfather {
+  background: #585f77;
+  width: 30%;
+  border-radius: $radius;
+  padding: 4rem 3rem;
+  color: #fff;
+  h4 {
+    margin-top: 1rem;
+  }
+  div {
+    cursor: pointer;
+    .dateNumber {
+      font-size: $h1_size - 1;
+    }
+
+    .monthParent {
+      margin-left: 0.8rem;
+      margin-top: 0.5rem;
+      * {
+        margin-right: 0.3rem;
+        font-size: $main_font + 0.5;
+      }
+    }
+  }
+
+  .bookNow {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    color: $white_color;
+    text-align: center;
+  }
+}
+
+.grandfather:hover {
+  box-shadow: $box;
+}

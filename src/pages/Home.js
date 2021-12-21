@@ -1,20 +1,15 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import FirstImage from "../components/FirstImage/FirstImage";
 import RoomsSection from "../components/Rooms/Rooms";
 import AboutHotel from "../components/AboutHotel/AboutHotel";
 import Subscription from "../components/Subscription/Subscription";
-import axios from "axios";
+import Products from "../components/Products/Products";
+import GoUp from "../components/Design/GoUp/GoUp";
+import useRequest from "../hooks/use-request";
 
 const Home = () => {
-  const [rooms, setRooms] = useState();
-  useEffect(() => {
-    const processing = async () => {
-      const res = await axios.get(`http://127.0.0.1:8000/api/rooms?page=1`);
-      const data = res.data.message.data;
-      setRooms(data.slice(0, 3));
-    };
-    processing();
-  }, []);
+  const { values: rooms } = useRequest("rooms/all/3");
+  const { values: products } = useRequest("products/all/3");
   return (
     <Fragment>
       <FirstImage
@@ -23,9 +18,11 @@ const Home = () => {
         title="Hotel"
         sentence="SLEEP IF YOU CAN"
       />
-      <RoomsSection justRooms={true} processedRooms={rooms} />
+      <RoomsSection processedRooms={rooms} />
+      <Products processedProducts={products} />
       <AboutHotel />
       <Subscription />
+      <GoUp />
     </Fragment>
   );
 };

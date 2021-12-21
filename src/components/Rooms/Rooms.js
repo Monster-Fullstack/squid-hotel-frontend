@@ -1,14 +1,17 @@
-import { useSelector } from "react-redux";
+import useProcess from "../../hooks/use-process";
 import Card from "../Design/Card/Card";
 import Grid from "../Design/Grid/Grid";
+import Loading from "../Design/Loading/Loading";
 import MainSection from "../Design/Section/MainSection";
 
 const RoomsSection = ({ processedRooms = [] }) => {
-  let rooms = useSelector((state) => state.roomsReducer.rooms);
+  let { values: rooms, isLoading } = useProcess("rooms");
+
   if (processedRooms.length !== 0) {
     rooms = processedRooms;
   }
-  const getRoomsMethod = rooms.map((el) => {
+
+  const getRooms = rooms.map((el) => {
     const desc = el.description.slice(0, 50);
     return (
       <Card
@@ -21,10 +24,12 @@ const RoomsSection = ({ processedRooms = [] }) => {
       />
     );
   });
+
   return (
     <MainSection>
       <h2 className="section_heading">OUR ROOMS</h2>
-      <Grid>{getRoomsMethod}</Grid>
+      <Grid>{getRooms}</Grid>
+      {processedRooms.length === 0 && <Loading isLoading={isLoading} />}
     </MainSection>
   );
 };

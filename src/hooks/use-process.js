@@ -13,10 +13,11 @@ import { useEffect, useState } from "react";
   };
  * @returns isLoading
  */
-const useProcess = (dispatch = () => {}, URLNAME) => {
-  const [isloading, setIsLoading] = useState(false);
+const useProcess = (URLNAME) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [isFinshed, setIsFinshed] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [values, setValues] = useState([]);
 
   useEffect(() => {
     const getMore = () => {
@@ -31,7 +32,8 @@ const useProcess = (dispatch = () => {}, URLNAME) => {
           );
 
           const data = res.data.message.data;
-          dispatch(data);
+          const join = values.concat(data);
+          setValues(join);
           if (res.data.message.last_page === currentPage - 1) {
             setIsFinshed(true);
             return setIsLoading(false);
@@ -43,14 +45,14 @@ const useProcess = (dispatch = () => {}, URLNAME) => {
       }
     };
 
-    !isloading && window.addEventListener("scroll", getMore);
+    !isLoading && window.addEventListener("scroll", getMore);
 
     return () => {
       window.removeEventListener("scroll", getMore);
     };
   });
 
-  return isloading;
+  return { values, isLoading };
 };
 
 export default useProcess;
