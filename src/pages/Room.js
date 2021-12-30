@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Fragment, useCallback, useEffect, useState } from "react";
+import { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import AboutRoom from "../components/AboutRoom/AboutRoom";
 import BestRooms from "../components/BestRooms/BestRooms";

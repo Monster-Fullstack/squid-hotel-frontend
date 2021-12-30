@@ -2,15 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 /**
- * useProcess() hook -v1
+ * useProcess() hook -v2
  * @description this hook make processing for data and get Infinite Scroll Pagination for cards
  * @notic backend must send the data in [ message ] object not any name else
- * @param {function} dispatch this function just execute the dispatch by responed data
+ * @new the hook doesnt need function to pass anymore
  * @param {string} urlname this is the API URL NAME
- * @example 
- * const dispatchProduct = (data) => {
-    dispatch(productsActions.getMoreProducts(data));
-  };
  * @returns isLoading
  */
 const useProcess = (URLNAME) => {

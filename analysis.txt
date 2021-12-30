@@ -1,7 +1,21 @@
--------- ~ Store Data ~ --------
-1- Rooms Data 
- - title
- - difficaulty [ easy, meduim, hard, extremly hard, nighmare ]
- - room avatar image
- - room [images]
- - room subscription type $$
+````````` analysis v2 ````````
+``` Product Page ```
+1- Product Page Design [  ]
+2- Product Page Data by [ useRequest hook ]
+3- Product Page related products [ useProcess ]
+`````````````````````````
+``` Auth ```
+1- Registering in app/hotel
+2- Login in app
+3- Handling the middleware or permitions of members
+`````````````````````````
+``` Linking ```
+1- Link the member with rooms when subscripe on it
+2- Link the member with products when buy it 
+3- Handling the home page when be auth or member
+`````````````````````````
+``` Social Media ```
+1- Member can add friend to chat with them
+2- Members can make video calls
+3- Members can make voice calls
+`````````````````````````

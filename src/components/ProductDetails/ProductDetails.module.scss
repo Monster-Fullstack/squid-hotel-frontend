@@ -1,0 +1,17 @@
+@use "../../style/helpers/var" as *;
+.parents {
+  width: 45%;
+  word-break: break-all;
+  .price {
+    font-size: $big_font;
+    margin: 2rem 0;
+    color: $secondary_color;
+    font-weight: bolder;
+  }
+  .description {
+    width: 85%;
+    height: 12.5rem;
+    overflow-y: auto;
+    line-height: 1.5;
+  }
+}
