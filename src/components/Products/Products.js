@@ -17,9 +17,9 @@ const Products = ({ processedProducts = [] }) => {
         key={el.id}
         id={el.id}
         title={el.name}
+        type={"$" + el.price}
         url="store"
-        content={`${desc}...`}
-        price={el.price}
+        rate={el.rate}
         cover={`productsImages/${el.photo}.jpg`}
       />
     );

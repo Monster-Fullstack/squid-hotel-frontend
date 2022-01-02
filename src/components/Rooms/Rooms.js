@@ -12,14 +12,14 @@ const RoomsSection = ({ processedRooms = [] }) => {
   }
 
   const getRooms = rooms.map((el) => {
-    const desc = el.description.slice(0, 50);
     return (
       <Card
         key={el.id}
         id={el.id}
         title={el.name}
         url="rooms"
-        content={`${desc}...`}
+        type={el.allowed_type.toUpperCase()}
+        rate={el.rate}
         cover={`roomsImages/${el.photo}.jpg`}
       />
     );

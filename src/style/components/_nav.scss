@@ -68,7 +68,7 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   height: 3.5rem;
-  background: var(--main_color);
+  background: var(--main_color) !important;
   z-index: 2000;
 }
 

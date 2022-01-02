@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import FirstImage from "../components/FirstImage/FirstImage";
 import RoomsSection from "../components/Rooms/Rooms";
 import AboutHotel from "../components/AboutHotel/AboutHotel";

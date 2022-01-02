@@ -1,0 +1,7 @@
+@use "../../../style/helpers/var" as *;
+.stars {
+  svg {
+    color: rgba($secondary_color, 1);
+    font-size: $big_font;
+  }
+}

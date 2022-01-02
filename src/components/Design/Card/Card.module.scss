@@ -3,29 +3,33 @@
 .card {
   width: 22rem;
   height: 14rem;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: $radius;
   margin-right: 1rem;
   margin-top: 2rem;
+  text-align: center;
   position: relative;
+  cursor: pointer;
+
   @extend .backgroundImg;
   .title {
     text-align: center;
-    width: 8rem;
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
     margin: 0 auto;
     color: rgba(#fff, 0.8);
     background-color: $main_color;
     border-radius: $radius;
   }
 
-  .content {
-    opacity: 0;
+  .rate {
     margin-top: 2rem;
-    width: 60%;
-    transform: translateX(-2rem);
+    * {
+      font-size: $font_size + 0.5 !important;
+    }
   }
 
-  .price {
+  .type {
     position: absolute;
     bottom: 1rem;
     left: 2rem;
@@ -33,16 +37,6 @@
     border-radius: $radius;
     color: $white_color;
     padding: 0.5rem 1rem;
-  }
-}
-
-.card:hover {
-  cursor: pointer;
-  .content {
-    opacity: 1;
-    color: $white_color;
-    background: rgba(#000, 0.6);
-    transform: translateX(0);
   }
 }
 

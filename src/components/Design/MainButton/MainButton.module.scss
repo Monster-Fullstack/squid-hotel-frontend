@@ -3,8 +3,10 @@
   background: $secondary_color;
   color: $smooth_black;
   padding: 0.8rem 1.8rem;
+  font-weight: 400;
   border-radius: $radius;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn:hover {

@@ -19,9 +19,9 @@ const RoomProducts = () => {
         <Card
           title={el.name}
           key={el.id}
-          url={"products"}
+          url={"store"}
           id={el.id}
-          content={`${el.description.slice(0, 25)}...`}
+          rate={el.rate}
           cover={`/productsImages/${el.photo}.jpg`}
           price={el.price}
         />

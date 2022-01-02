@@ -21,7 +21,7 @@ const SubscriptionCard = ({
           className={isMainButton ? classes.dollarMain : classes.dollarBlack}
         >
           $
-        </span>{" "}
+        </span>
         {price},000
       </p>
       <p className={classes.per}>per month</p>
@@ -32,11 +32,11 @@ const SubscriptionCard = ({
         <p>{desc4}</p>
       </div>
       {isMainButton ? (
-        <MainButton className={classes.edit_btn} src="#">
+        <MainButton className={classes.edit_btn} src="/register?type=premium">
           Subscripe Now
         </MainButton>
       ) : (
-        <BlackButton className={classes.edit_btn} src="#">
+        <BlackButton className={classes.edit_btn} src="/register?type=basic">
           Subscripe Now
         </BlackButton>
       )}

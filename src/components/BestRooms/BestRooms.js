@@ -13,6 +13,7 @@ const BestRooms = () => {
         <BestRoomsCard
           key={el.id}
           id={el.id}
+          rate={el.rate}
           title={el.name}
           allowed_type={el.allowed_type}
           photo={el.photo}

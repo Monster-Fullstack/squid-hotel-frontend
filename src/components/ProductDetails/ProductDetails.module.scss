@@ -1,7 +1,11 @@
 @use "../../style/helpers/var" as *;
 .parents {
   width: 45%;
+  height: 35rem;
   word-break: break-all;
+  .img {
+    height: 100% !important;
+  }
   .price {
     font-size: $big_font;
     margin: 2rem 0;
